@@ -1,0 +1,26 @@
+// Import Randomized library
+@import "randomized";
+
+@bg-color: #fff;
+
+// Check the luma without gamma correction, this behaviors the same with jscolor.js
+.check-bg (@v) when (luminance(@v) >= 50%) {
+  @return-bg: mix(#000, @v, 90%);
+}
+
+.check-bg (@v) when (luminance(@v) < 50%) {
+  @return-bg: mix(#fff, @v, 90%);
+}
+
+// The following rules will be removed from final export
+/*! BEGIN: app-only … */
+body {
+  .check-bg(@bg-color);
+  color: @return-bg;
+  background: @bg-color;
+}
+
+a {
+  color: @link-color;
+}
+/*! END: app-only … */
