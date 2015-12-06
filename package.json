@@ -4,7 +4,8 @@
   "description": "Vagueness colors for machines and people from the future",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev-server": "webpack-dev-server --config webpack.config.js --progress --colors",
+    "build": "webpack --config webpack.config.js --progress --profile --colors"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/sparanoid/randomized/issues"
   },
-  "homepage": "https://github.com/sparanoid/randomized#readme"
+  "homepage": "https://github.com/sparanoid/randomized#readme",
+  "devDependencies": {
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "dependencies": {
+    "less": "^2.5.3",
+    "react-color": "^1.2.1"
+  }
 }
