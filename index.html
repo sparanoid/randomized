@@ -1,7 +1,6 @@
 <!doctype html>
 <title>Randomized - Vagueness colors for machines and people from the future - Sparanoid</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<script src="jscolor.min.js"></script>
 <link rel="stylesheet" href="app.css">
 <link rel="stylesheet/less" href="app.less">
 
@@ -14,31 +13,31 @@
 <p>by <a href="http://sparanoid.com/">Sparanoid</a></p>
 
 <p>
-  <button class="jscolor {uppercase:false, valueElement:'code-color', onFineChange:'setScheme(\'picker\')'}">
+  <button id="code-color-btn" class="jscolor {uppercase:false, valueElement:'code-color', onFineChange:'setScheme(\'picker\')'}">
     Main color
   </button>
-  <input id="code-color" value="00cc80">
+  <input id="code-color" value="..." onchange="setScheme('post-picker')">
 </p>
 
 <p>
-  <button class="jscolor {uppercase:false, valueElement:'link-color', onFineChange:'setScheme(\'picker\')'}">
+  <button id="link-color-btn" class="jscolor {uppercase:false, valueElement:'link-color', onFineChange:'setScheme(\'picker\')'}">
     Tint color
   </button>
-  <input id="link-color" value="a212d1">
+  <input id="link-color" value="..." onchange="setScheme('post-picker')">
 </p>
 
 <p>
-  <button class="jscolor {uppercase:false, valueElement:'bg-color', onFineChange:'setScheme(\'picker\')'}">
+  <button id="bg-color-btn" class="jscolor {uppercase:false, valueElement:'bg-color', onFineChange:'setScheme(\'picker\')'}">
     background
   </button>
-  <input id="bg-color" value="ffffff">
+  <input id="bg-color" value="..." onchange="setScheme('post-picker')">
 </p>
 
 <p>
-  <button data-scheme="00cc80,a212d1,ffffff" onclick="setScheme('present', this)">Default Scheme</button>
-  <button data-scheme="da4fff,33d1a0,000000" onclick="setScheme('present', this)">Scheme #1</button>
-  <button data-scheme="ffe669,ffc3f7,614235" onclick="setScheme('present', this)">Scheme #2</button>
-  <button data-scheme="ff57f4,8ef8ff,141e5e" onclick="setScheme('present', this)">Scheme #3</button>
+  <button data-scheme="00cc80-a212d1-ffffff" onclick="setScheme('present', this)">Default Scheme</button>
+  <button data-scheme="da4fff-33d1a0-000000" onclick="setScheme('present', this)">Scheme #1</button>
+  <button data-scheme="ffe669-ffc3f7-614235" onclick="setScheme('present', this)">Scheme #2</button>
+  <button data-scheme="ff57f4-8ef8ff-141e5e" onclick="setScheme('present', this)">Scheme #3</button>
 </p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">show</span>
@@ -131,5 +130,6 @@ and <span class="p">[</span><span class="nv">regular links too</span><span class
 </code></pre> </div>
 
 <script>less = { env: 'production'};</script>
+<script src="jscolor.min.js"></script>
 <script src="less.min.js"></script>
 <script src="app.js"></script>
