@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/sparanoid/randomized/issues"
   },
-  "homepage": "https://github.com/sparanoid/randomized#readme"
+  "homepage": "https://github.com/sparanoid/randomized#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.13.4"
+  }
 }
