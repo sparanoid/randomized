@@ -67,7 +67,7 @@ var setScheme = (method, el) => {
   var updateLessToDom = () => {
     // https://regex101.com/r/SNWrBz/3
     var re = /\/\*!(?: BEGIN: app-only)[\s\S]*(?: END: app-only \*\/)/i;
-    var lessDom = localStorage[`${window.location.origin}/app.less`];
+    var lessDom = localStorage[`${location.protocol}//${location.host}${location.pathname}app.less`];
     getEl('generated-styles').innerHTML = lessDom.replace(re, '');
   };
 
@@ -86,7 +86,6 @@ var setScheme = (method, el) => {
     updateTitle(scheme);
     updateSharerUrl(scheme);
     updateLessToDom();
-    // window.setTimeout(updateLessToDom(), 2000);
   };
 
   // Variables
