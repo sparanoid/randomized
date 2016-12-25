@@ -7,16 +7,58 @@
 }
 
 * {
-  transition: color .4s ease, background .4s ease;
+  transition: color .4s ease, background .4s ease .2s;
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 20px;
+  font-size: 1.6vw;
   line-height: 1.6;
   padding: 2vw;
-  max-width: 800px;
+  font-feature-settings: 'case', 'ss01', 'ss02';
+  -webkit-font-smoothing: antialiased;
 }
+
+@media (max-width: 1080px) { body { font-size: calc(1.6vw * 1.4); } }
+@media (max-width: 640px)  { body { font-size: calc(1.6vw * 2.4); } }
+@media (max-width: 400px)  { body { font-size: calc(1.6vw * 3.2); } }
+
+h1 {
+  font-size: 1000%;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.05em;
+  padding: 14vw 0 0;
+  margin-left: -.8vw;
+}
+
+@media (max-width: 1080px) { h1 { font-size: 700%; } }
+@media (max-width: 640px)  { h1 { font-size: 400%; } }
+@media (max-width: 400px)  { h1 { font-size: 300%; } }
+
+h2 {
+  font-size: 250%;
+  font-weight: 400;
+  line-height: 1;
+  margin-left: -.2vw;
+  margin-bottom: 2vw;
+}
+
+@media (max-width: 1080px) { h2 { font-size: 240%; } }
+@media (max-width: 640px)  { h2 { font-size: 160%; } }
+@media (max-width: 400px)  { h2 { font-size: 120%; font-weight: 300; margin-left: -.1vw; } }
+
+h3 {
+  font-size: 200%;
+  font-weight: 300;
+  line-height: 1;
+  padding: 0 0 14vw;
+  margin-left: -.1vw;
+}
+
+@media (max-width: 1080px) { h3 { font-size: 180%; } }
+@media (max-width: 640px)  { h3 { font-size: 140%; } }
+@media (max-width: 400px)  { h3 { font-size: 100%; font-weight: 300; } }
 
 input,
 button,
@@ -51,4 +93,12 @@ pre {
   margin: 0 0 1.8rem;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrap {
+  max-width: 800px;
 }
