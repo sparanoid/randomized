@@ -152,4 +152,12 @@
 <script src="app.js"></script>
 <script>
   setScheme('init');
+
+  // Set presents background color
+  let presents = document.querySelectorAll('.btn-present button');
+  [...presents].map(present => {
+    let colors = present.getAttribute('data-scheme').split('-');
+    present.style.color = `#${colors[2]}`;
+    present.style.background = `#${colors[0]}`;
+  });
 </script>
