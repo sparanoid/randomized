@@ -6,7 +6,7 @@
 
 <h1>Randomized</h1>
 
-<p>Vagueness colors for machines and people from the future.</p>
+<p>Vagueness colors for machines and people from the future. Inspired by [Solarized](http://ethanschoonover.com/solarized)</p>
 
 <p>This is an experimental demo and may change until the project stabilizes.</p>
 
@@ -38,6 +38,8 @@
   <button data-scheme="da4fff-33d1a0-000000" onclick="setScheme('present', this)">Scheme #1</button>
   <button data-scheme="ffe669-ffc3f7-614235" onclick="setScheme('present', this)">Scheme #2</button>
   <button data-scheme="ff57f4-8ef8ff-141e5e" onclick="setScheme('present', this)">Scheme #3</button>
+  <button data-scheme="89f8ff-ffd0a9-171a1f" onclick="setScheme('present', this)">Scheme #4</button>
+  <button data-scheme="e14712-ff34d2-ffffff" onclick="setScheme('present', this)">Scheme #5</button>
 </p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">show</span>
@@ -45,7 +47,6 @@
 <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
   <span class="nb">format</span><span class="p">.</span><span class="nf">html</span> <span class="c1"># show.html.erb</span>
   <span class="nb">format</span><span class="p">.</span><span class="nf">json</span> <span class="p">{</span> <span class="n">render</span> <span class="ss">json: </span><span class="vi">@widget</span> <span class="p">}</span>
-<span class="k">end</span>
 <span class="k">end</span>
 </code></pre> </div>
 
