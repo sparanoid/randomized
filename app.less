@@ -4,6 +4,8 @@
 /*! BEGIN: app-only */
 // The following rules will be removed from final export
 @bg-color: #fff;
+@link-color: #a212d1;
+@code-color: #00cc80;
 
 // Check the luma without gamma correction, this behaviors the same with jscolor.js
 .check-bg (@v) when (luminance(@v) >= 50%) {
@@ -32,6 +34,10 @@ input {
   .check-bg(@bg-color);
   color: @bg-color;
   background: @return-bg;
+}
+
+.generated-styles {
+  color: @code-color;
 }
 
 .btn-present button {
