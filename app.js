@@ -5,7 +5,7 @@ var setScheme = (method, el) => {
 
   // Helpers
   var getEl = (el) => {
-    return document.getElementById(el);
+    return document.getElementById(el) || document.querySelectorAll(el);
   };
 
   var isHex = (colors) => {
@@ -54,10 +54,20 @@ var setScheme = (method, el) => {
     document.title = `Randomized - #${scheme.code} #${scheme.link} #${scheme.bg} - Sparanoid`;
   };
 
+  var updateSharerUrl = (scheme) => {
+    var shares = getEl('.sharer');
+    var title = `Randomized by Sparanoid: Erratic colors for machines and people #${scheme.code} #${scheme.link} #${scheme.bg}`;
+    var url = window.location.href;
+    for (let i = 0; i < shares.length; i++) {
+      shares[i].setAttribute('data-title', title);
+      shares[i].setAttribute('data-url', url);
+    }
+  };
+
   var updateLessToDom = () => {
     // https://regex101.com/r/SNWrBz/3
-    let re = /\/\*!(?: BEGIN: app-only)[\s\S]*(?: END: app-only \*\/)/i;
-    let lessDom = localStorage[`${window.location.origin}/app.less`];
+    var re = /\/\*!(?: BEGIN: app-only)[\s\S]*(?: END: app-only \*\/)/i;
+    var lessDom = localStorage[`${window.location.origin}/app.less`];
     getEl('generated-styles').innerHTML = lessDom.replace(re, '');
   };
 
@@ -74,6 +84,7 @@ var setScheme = (method, el) => {
     updateLess(scheme);
     updateUrl(scheme);
     updateTitle(scheme);
+    updateSharerUrl(scheme);
     updateLessToDom();
     // window.setTimeout(updateLessToDom(), 2000);
   };
