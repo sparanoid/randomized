@@ -47,7 +47,7 @@ var setScheme = (method, el) => {
   };
 
   var updateUrl = (scheme) => {
-    window.location.hash = `#${scheme.code}-${scheme.link}-${scheme.bg}`;
+    location.hash = `#${scheme.code}-${scheme.link}-${scheme.bg}`;
   };
 
   var updateTitle = (scheme) => {
@@ -57,7 +57,7 @@ var setScheme = (method, el) => {
   var updateSharerUrl = (scheme) => {
     var shares = getEl('.sharer');
     var title = `Randomized by Sparanoid: Erratic colors for machines and people #${scheme.code} #${scheme.link} #${scheme.bg}`;
-    var url = window.location.href;
+    var url = location.href;
     for (let i = 0; i < shares.length; i++) {
       shares[i].setAttribute('data-title', title);
       shares[i].setAttribute('data-url', url);
@@ -99,8 +99,8 @@ var setScheme = (method, el) => {
   var colors = [];
 
   var setColorsFromHash = () => {
-    if (window.location.hash) {
-      let hash = window.location.hash.replace(/^#/, '').split('-');
+    if (location.hash) {
+      let hash = location.hash.replace(/^#/, '').split('-');
       if (isHex(hash)) {
         colors = hash;
       } else {
@@ -135,10 +135,8 @@ var setScheme = (method, el) => {
   }
 
   // Update scheme when URL hash changes
-  if (('onhashchange' in window)) {
-    window.onhashchange = () => {
-      setColorsFromHash();
-      update(scheme, colors, true);
-    };
-  }
+  onhashchange = () => {
+    setColorsFromHash();
+    update(scheme, colors, true);
+  };
 };
