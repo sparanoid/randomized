@@ -67,8 +67,12 @@ var setScheme = (method, el) => {
   var updateLessToDom = () => {
     // https://regex101.com/r/SNWrBz/3
     var re = /\/\*!(?: BEGIN: app-only)[\s\S]*(?: END: app-only \*\/)/i;
-    var lessDom = localStorage[`${location.protocol}//${location.host}${location.pathname}app.less`];
-    getEl('generated-styles').innerHTML = lessDom.replace(re, '');
+
+    // https://github.com/less/less.js/issues/2562
+    less.pageLoadFinished.then(() => {
+      var lessDom = localStorage[`${location.protocol}//${location.host}${location.pathname}app.less`];
+      getEl('generated-styles').innerHTML = lessDom.replace(re, '');
+    });
   };
 
   var update = (scheme, colors, updateButtons = false) => {
