@@ -52,7 +52,7 @@ h3 {
   font-size: 200%;
   font-weight: 300;
   line-height: 1;
-  padding: 0 0 14vw;
+  padding: 0 0 12vw;
   margin-left: -.1vw;
 }
 
@@ -67,6 +67,13 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+input {
+  font-family: Menlo, Consolas, monospace;
 }
 
 button {
@@ -101,4 +108,38 @@ a {
 
 .wrap {
   max-width: 800px;
+}
+
+.sub-heading {
+  font-size: 72%;
+  text-transform: uppercase;
+  margin: 10vmin 0 1rem;
+  opacity: .5;
+}
+
+.btn-picker {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn-picker button {
+  flex-grow: 1;
+  text-align: right;
+  font-family: Menlo, Consolas, monospace;
+  padding: .2em .4em;
+}
+
+.btn-picker input {
+  width: 8ex;
+  padding: .2em .4em;
+}
+
+.btn-present {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.generated-styles {
+  font-size: 72%;
+  height: 12em;
 }
