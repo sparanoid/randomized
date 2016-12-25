@@ -52,6 +52,12 @@ var setScheme = (method, el) => {
     document.title = `Randomized - #${scheme.code} #${scheme.link} #${scheme.bg} - Sparanoid`;
   };
 
+  var updateLessToDom = () => {
+    var lessDom = document.getElementById('less:app').cloneNode(true);
+    getEl('generated-styles').innerHTML = '';
+    getEl('generated-styles').appendChild(lessDom.firstChild);
+  };
+
   var update = (scheme, colors, updateButtons = false) => {
     updateScheme(scheme, colors);
     updateSchemeInputs(scheme);
@@ -65,6 +71,7 @@ var setScheme = (method, el) => {
     updateLess(scheme);
     updateUrl(scheme);
     updateTitle(scheme);
+    updateLessToDom();
   };
 
   // Variables
