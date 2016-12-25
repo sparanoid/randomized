@@ -1,6 +1,8 @@
 // Import Randomized library
 @import "randomized";
 
+/*! BEGIN: app-only */
+// The following rules will be removed from final export
 @bg-color: #fff;
 
 // Check the luma without gamma correction, this behaviors the same with jscolor.js
@@ -12,8 +14,6 @@
   @return-bg: mix(#fff, @v, 90%);
 }
 
-// The following rules will be removed from final export
-/*! BEGIN: app-only … */
 body {
   .check-bg(@bg-color);
   color: @return-bg;
@@ -23,4 +23,8 @@ body {
 a {
   color: @link-color;
 }
-/*! END: app-only … */
+
+h1 {
+  color: @code-color;
+}
+/*! END: app-only */

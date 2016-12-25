@@ -53,9 +53,13 @@ var setScheme = (method, el) => {
   };
 
   var updateLessToDom = () => {
-    var lessDom = document.getElementById('less:app').cloneNode(true);
-    getEl('generated-styles').innerHTML = '';
-    getEl('generated-styles').appendChild(lessDom.firstChild);
+    // https://regex101.com/r/SNWrBz/3
+    let re = /\/\*!(?: BEGIN: app-only)[\s\S]*(?: END: app-only \*\/)/i;
+    let lessDom = document.getElementById('less:app').cloneNode(true);
+    let lessDiv = getEl('generated-styles');
+    lessDiv.innerHTML = '';
+    lessDiv.appendChild(lessDom.firstChild);
+    lessDiv.innerHTML = lessDiv.innerHTML.replace(re, '');
   };
 
   var update = (scheme, colors, updateButtons = false) => {
