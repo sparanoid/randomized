@@ -7,7 +7,7 @@
 }
 
 * {
-  transition: color .4s ease, background .4s ease .2s;
+  transition: color .4s ease, background .4s ease .4s;
 }
 
 body {
@@ -15,6 +15,7 @@ body {
   font-size: 1.6vw;
   line-height: 1.6;
   padding: 2vw;
+  color: #fff;
   font-feature-settings: 'case', 'ss01', 'ss02';
   -webkit-font-smoothing: antialiased;
 }
@@ -28,7 +29,7 @@ h1 {
   font-weight: 800;
   line-height: 1;
   letter-spacing: -.05em;
-  padding: 14vw 0 0;
+  margin-top: 14vw;
   margin-left: -.8vw;
 }
 
@@ -52,13 +53,18 @@ h3 {
   font-size: 200%;
   font-weight: 300;
   line-height: 1;
-  padding: 0 0 12vw;
+  margin-bottom: 12vw;
   margin-left: -.1vw;
 }
 
 @media (max-width: 1080px) { h3 { font-size: 160%; } }
 @media (max-width: 640px)  { h3 { font-size: 120%; } }
 @media (max-width: 400px)  { h3 { font-size: 100%; font-weight: 300; } }
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
 
 input,
 button,
@@ -73,11 +79,15 @@ textarea {
 }
 
 input {
+  color: #fff;
   font-family: Menlo, Consolas, monospace;
 }
 
 button {
+  color: #fff;
+  background: transparent;
   padding: 0 10px;
+  cursor: pointer;
 }
 
 p,
@@ -100,10 +110,6 @@ pre {
   margin: 0 0 1.8rem;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-}
-
-a {
-  text-decoration: none;
 }
 
 .wrap {
