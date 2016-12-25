@@ -1,12 +1,12 @@
 <!doctype html>
-<title>Randomized: Erratic colors for machines and people from the future - Sparanoid</title>
+<title>Randomized: Erratic colors for machines and people powered by machine learning and artificial intelligence, just kidding. - Sparanoid</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="app.css">
 <link rel="stylesheet/less" href="app.less">
 
 <h1>Randomized</h1>
 
-<h2 class="wrap">Erratic colors for machines and people from the future.</h2>
+<h2>Erratic colors for machines and people powered by machine learning and artificial intelligence, just kidding.</h2>
 
 <h3>by <a href="http://sparanoid.com/">Sparanoid</a></h3>
 
@@ -36,11 +36,17 @@
     </p>
   </p>
 
+  <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+    <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+  <span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+  <span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
   <h2 class="sub-heading" id="predefined-colors">Predefined colors</h2>
   <p class="btn-present">
-    <button data-scheme="00cc80-a212d1-ffffff" onclick="setScheme('present', this)">Default Scheme</button>
+    <button data-scheme="00cc80-a212d1-ffffff" onclick="setScheme('present', this)">Default</button>
     <button data-scheme="da4fff-33d1a0-000000" onclick="setScheme('present', this)">Scheme #1</button>
-    <button data-scheme="ffe669-ffc3f7-614235" onclick="setScheme('present', this)">Scheme #2</button>
+    <button data-scheme="f4ff73-ffc8d4-3d4250" onclick="setScheme('present', this)">Scheme #2</button>
     <button data-scheme="ff57f4-8ef8ff-141e5e" onclick="setScheme('present', this)">Scheme #3</button>
     <button data-scheme="89f8ff-ffd0a9-171a1f" onclick="setScheme('present', this)">Scheme #4</button>
     <button data-scheme="e14712-ff34d2-ffffff" onclick="setScheme('present', this)">Scheme #5</button>
@@ -49,16 +55,7 @@
   <h2 class="sub-heading" id="share">Share</h2>
   <p>Share your current theme to Twitter.</p>
 
-  <h2 class="sub-heading" id="usage">Usage</h2>
-  <p>Copy the following code and paste it into your <a href="https://github.com/jekyll/jekyll">Jekyll</a> styles, or any <a href="https://github.com/jneen/rouge">Rouge</a> or <a href="https://github.com/vmg/redcarpet">Redcarpet</a> compatible highlighters:</p>
-  <div class="highlight">
-    <pre class="generated-styles" id="generated-styles">Source not generated</pre>
-  </div>
-
-  <h2 class="sub-heading" id="source-code">Source Code</h2>
-  <p><a href="https://github.com/sparanoid/randomized">GitHub</a></p>
-
-  <h2 class="sub-heading" id="demos">Demos</h1>
+  <h2 class="sub-heading" id="more-examples">More Examples</h1>
   <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">show</span>
   <span class="vi">@widget</span> <span class="o">=</span> <span class="no">Widget</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="ss">:id</span><span class="p">])</span>
   <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
@@ -128,12 +125,21 @@
   and <span class="p">[</span><span class="nv">regular links too</span><span class="p">](</span><span class="sx">http://example.com</span><span class="p">)</span>
 
   <span class="p">[</span><span class="ss">ref 1</span><span class="p">]:</span> <span class="sx">http://example.com</span></code></pre> </div>
+
+  <h2 class="sub-heading" id="usage">Usage</h2>
+  <p>Copy the following code and paste it into your <a href="https://github.com/jekyll/jekyll">Jekyll</a> styles, or any <a href="https://github.com/jneen/rouge">Rouge</a> or <a href="https://github.com/vmg/redcarpet">Redcarpet</a> compatible highlighters:</p>
+  <div class="highlight">
+    <pre class="generated-styles" id="generated-styles">Source not generated</pre>
+  </div>
+
+  <h2 class="sub-heading" id="source-code">Source Code</h2>
+  <p><a href="https://github.com/sparanoid/randomized">GitHub</a></p>
+
+  <h2 class="sub-heading" id="donate">Donate</h2>
+  <p>This is a side project by <a href="https://sparanoid.com/">Tunghsiao Liu</a>, if you like this service, please consider <a href="https://sparanoid.com/donate/">buying me a cup of coffee</a>. Thanks.</p>
+
+  <p><small>&copy; Sparanoid, Inc.</small></p>
 </div>
-
-<h2 class="sub-heading" id="donate">Donate</h2>
-<p>This is a side project by <a href="https://sparanoid.com/">Tunghsiao Liu</a>, if you like this service, please consider <a href="https://sparanoid.com/donate/">buying me a cup of coffee</a>. Thanks.</p>
-
-<p><small>&copy; Sparanoid, Inc.</small></p>
 
 <script>less = { env: 'production'};</script>
 <script src="jscolor.min.js"></script>

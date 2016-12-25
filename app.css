@@ -39,13 +39,13 @@ h1 {
 h2 {
   font-size: 250%;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.2;
   margin-left: -.2vw;
-  margin-bottom: 2vw;
+  margin-bottom: 1.4vw;
 }
 
-@media (max-width: 1080px) { h2 { font-size: 240%; } }
-@media (max-width: 640px)  { h2 { font-size: 160%; } }
+@media (max-width: 1080px) { h2 { font-size: 180%; } }
+@media (max-width: 640px)  { h2 { font-size: 140%; } }
 @media (max-width: 400px)  { h2 { font-size: 120%; font-weight: 300; margin-left: -.1vw; } }
 
 h3 {
@@ -56,8 +56,8 @@ h3 {
   margin-left: -.1vw;
 }
 
-@media (max-width: 1080px) { h3 { font-size: 180%; } }
-@media (max-width: 640px)  { h3 { font-size: 140%; } }
+@media (max-width: 1080px) { h3 { font-size: 160%; } }
+@media (max-width: 640px)  { h3 { font-size: 120%; } }
 @media (max-width: 400px)  { h3 { font-size: 100%; font-weight: 300; } }
 
 input,
