@@ -35,9 +35,9 @@ var setScheme = (method, el) => {
   var updateLess = (scheme) => {
     if (isScheme(scheme)) {
       less.modifyVars({
-        '@code-color': '#' + scheme.code,
-        '@link-color': '#' + scheme.link,
-        '@bg-color': '#' + scheme.bg
+        '@code-color': `#${scheme.code}`,
+        '@link-color': `#${scheme.link}`,
+        '@bg-color': `#${scheme.bg}`
       });
     } else {
       console.log('Scheme invalid');
@@ -55,11 +55,8 @@ var setScheme = (method, el) => {
   var updateLessToDom = () => {
     // https://regex101.com/r/SNWrBz/3
     let re = /\/\*!(?: BEGIN: app-only)[\s\S]*(?: END: app-only \*\/)/i;
-    let lessDom = document.getElementById('less:app').cloneNode(true);
-    let lessDiv = getEl('generated-styles');
-    lessDiv.innerHTML = '';
-    lessDiv.appendChild(lessDom.firstChild);
-    lessDiv.innerHTML = lessDiv.innerHTML.replace(re, '');
+    let lessDom = localStorage[`${window.location.origin}/app.less`];
+    getEl('generated-styles').innerHTML = lessDom.replace(re, '');
   };
 
   var update = (scheme, colors, updateButtons = false) => {
@@ -76,6 +73,7 @@ var setScheme = (method, el) => {
     updateUrl(scheme);
     updateTitle(scheme);
     updateLessToDom();
+    // window.setTimeout(updateLessToDom(), 2000);
   };
 
   // Variables
@@ -132,6 +130,3 @@ var setScheme = (method, el) => {
     };
   }
 };
-
-// Init
-setScheme('init');

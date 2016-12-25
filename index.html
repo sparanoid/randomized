@@ -47,7 +47,7 @@
     <button data-scheme="00cc80-a212d1-ffffff" onclick="setScheme('present', this)">Default</button>
     <button data-scheme="da4fff-33d1a0-000000" onclick="setScheme('present', this)">Scheme #1</button>
     <button data-scheme="f4ff73-ffc8d4-3d4250" onclick="setScheme('present', this)">Scheme #2</button>
-    <button data-scheme="ff57f4-8ef8ff-141e5e" onclick="setScheme('present', this)">Scheme #3</button>
+    <button data-scheme="ed8eff-8ef8ff-141e5e" onclick="setScheme('present', this)">Scheme #3</button>
     <button data-scheme="89f8ff-ffd0a9-171a1f" onclick="setScheme('present', this)">Scheme #4</button>
     <button data-scheme="e14712-ff34d2-ffffff" onclick="setScheme('present', this)">Scheme #5</button>
   </p>
@@ -141,7 +141,9 @@
   <p><small>&copy; Sparanoid, Inc.</small></p>
 </div>
 
-<script>less = { env: 'production'};</script>
+<script src="less.min.js" data-env="production"></script>
 <script src="jscolor.min.js"></script>
-<script src="less.min.js"></script>
 <script src="app.js"></script>
+<script>
+  setScheme('init');
+</script>
