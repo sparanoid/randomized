@@ -141,5 +141,5 @@ a {
 
 .generated-styles {
   font-size: 72%;
-  height: 12em;
+  max-height: 12em;
 }
