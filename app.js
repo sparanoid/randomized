@@ -1,3 +1,5 @@
+// This app is powered by React and Reflux for a more immersive experience,
+// just kidding.
 var setScheme = (method, el) => {
   'use strict';
 
