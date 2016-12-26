@@ -38,5 +38,11 @@ input {
 
 .generated-styles {
   color: @code-color;
+  transition-delay: 0s;
+
+  &:focus {
+    .check-bg(@bg-color);
+    background: fade(@return-bg, 4%);
+  }
 }
 /*! END: app-only */

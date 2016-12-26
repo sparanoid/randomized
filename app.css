@@ -95,6 +95,7 @@ button {
 p,
 pre {
   margin-bottom: 1.6rem;
+  outline: none;
 }
 
 code,
@@ -108,8 +109,8 @@ li code {
 }
 
 pre {
-  padding: 1em;
-  margin: 0 0 1.8rem;
+  padding: 2vw;
+  margin: 0 -2vw 1.8rem;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
