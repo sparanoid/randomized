@@ -58,10 +58,10 @@ var setScheme = (method, el) => {
     var shares = getEl('.sharer');
     var title = `Randomized by Sparanoid: Erratic colors for machines and people #${scheme.code} #${scheme.link} #${scheme.bg}`;
     var url = location.href;
-    for (let i = 0; i < shares.length; i++) {
-      shares[i].setAttribute('data-title', title);
-      shares[i].setAttribute('data-url', url);
-    }
+    [...shares].map(share => {
+      share.setAttribute('data-title', title);
+      share.setAttribute('data-url', url);
+    });
   };
 
   var updateLessToDom = () => {

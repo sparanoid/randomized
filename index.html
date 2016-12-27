@@ -32,21 +32,21 @@
       <button id="code-color-btn" class="jscolor {uppercase:false, valueElement:'code-color', onFineChange:'setScheme(\'picker\')'}">
         @code-color
       </button>
-      <input id="code-color" value="..." onchange="setScheme('post-picker')" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+      <input id="code-color" value="..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
     </p>
 
     <p class="btn-picker">
       <button id="link-color-btn" class="jscolor {uppercase:false, valueElement:'link-color', onFineChange:'setScheme(\'picker\')'}">
         @link-color
       </button>
-      <input id="link-color" value="..." onchange="setScheme('post-picker')" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+      <input id="link-color" value="..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
     </p>
 
     <p class="btn-picker">
       <button id="bg-color-btn" class="jscolor {uppercase:false, valueElement:'bg-color', onFineChange:'setScheme(\'picker\')'}">
         @bg-color
       </button>
-      <input id="bg-color" value="..." onchange="setScheme('post-picker')" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+      <input id="bg-color" value="..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
     </p>
   </p>
 
@@ -58,19 +58,19 @@
 
   <h2 class="sub-heading" id="predefined-colors">Predefined colors</h2>
   <p class="btn-present">
-    <button data-scheme="00cc80-a212d1-ffffff" onclick="setScheme('present', this)">Default theme</button>
-    <button data-scheme="da4fff-33d1a0-000000" onclick="setScheme('present', this)">Present #1</button>
-    <button data-scheme="f4ff73-ffc8d4-3d4250" onclick="setScheme('present', this)">Present #2</button>
-    <button data-scheme="ed8eff-8ef8ff-141e5e" onclick="setScheme('present', this)">Present #3</button>
-    <button data-scheme="89f8ff-ffd0a9-171a1f" onclick="setScheme('present', this)">Present #4</button>
-    <button data-scheme="e14712-ff34d2-ffffff" onclick="setScheme('present', this)">Present #5</button>
-    <button data-scheme="ff846b-ad40ff-10081f" onclick="setScheme('present', this)">Present #6</button>
-    <button data-scheme="1818d6-46bc5a-ffffff" onclick="setScheme('present', this)">Present #7</button>
-    <button data-scheme="ffae70-bbdfff-473a3d" onclick="setScheme('present', this)">Present #8</button>
-    <button data-scheme="2bbf84-0275d8-f7f7f9" onclick="setScheme('present', this)">Bootstrap (Parody)</button>
-    <button data-scheme="b51fa6-c05b4d-f8f5ec" onclick="setScheme('present', this)">React (Parody)</button>
-    <button data-scheme="b3f2ff-c28eff-434e56" onclick="setScheme('present', this)">Heroku (Parody)</button>
-    <button data-scheme="d68b00-cc2e39-fcf4eb" onclick="setScheme('present', this)">Flow (Parody)</button>
+    <button data-scheme="00cc80-a212d1-ffffff">Default theme</button>
+    <button data-scheme="da4fff-33d1a0-000000">Present #1</button>
+    <button data-scheme="f4ff73-ffc8d4-3d4250">Present #2</button>
+    <button data-scheme="ed8eff-8ef8ff-141e5e">Present #3</button>
+    <button data-scheme="89f8ff-ffd0a9-171a1f">Present #4</button>
+    <button data-scheme="e14712-ff34d2-ffffff">Present #5</button>
+    <button data-scheme="ff846b-ad40ff-10081f">Present #6</button>
+    <button data-scheme="1818d6-46bc5a-ffffff">Present #7</button>
+    <button data-scheme="ffae70-bbdfff-473a3d">Present #8</button>
+    <button data-scheme="2bbf84-0275d8-f7f7f9">Bootstrap (Parody)</button>
+    <button data-scheme="b51fa6-c05b4d-f8f5ec">React (Parody)</button>
+    <button data-scheme="b3f2ff-c28eff-434e56">Heroku (Parody)</button>
+    <button data-scheme="d68b00-cc2e39-fcf4eb">Flow (Parody)</button>
   </p>
 
   <h2 class="sub-heading" id="share">Share</h2>
@@ -181,4 +181,12 @@
     present.style.color = `#${colors[2]}`;
     present.style.background = `#${colors[0]}`;
   });
+
+  // Listen on input changes
+  let inputs = document.querySelectorAll('.btn-picker input');
+  [...inputs].map(input => input.addEventListener('change', () => setScheme('post-picker')));
+
+  // Listen on present clicks
+  let buttons = document.querySelectorAll('.btn-present button');
+  [...buttons].map(button => button.addEventListener('click', () => setScheme('present', button)));
 </script>
