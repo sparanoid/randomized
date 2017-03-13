@@ -16,7 +16,6 @@ body {
   line-height: 1.6;
   padding: 2vw;
   color: #fff;
-  font-feature-settings: 'case', 'ss01', 'ss02';
   -webkit-font-smoothing: antialiased;
 }
 
