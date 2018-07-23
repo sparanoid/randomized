@@ -11,7 +11,8 @@
     "url": "git+https://github.com/sparanoid/randomized.git"
   },
   "keywords": [
-    "less"
+    "less",
+    "sass"
   ],
   "author": "Tunghsiao Liu",
   "license": "MIT",
