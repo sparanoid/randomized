@@ -22,7 +22,7 @@
 
 <h2>Erratic colors for machines and people, powered by machine learning and artificial intelligence, just kidding.</h2>
 
-<h3>Powered by <a href="http://sparanoid.com/">Sparanoid</a></h3>
+<h3>Powered by <a href="https://sparanoid.com/">Sparanoid</a></h3>
 
 <div class="wrap">
   <p><b>Randomized</b> is a theme generator for syntax highlighters <a href="https://github.com/jneen/rouge">Rouge</a>, <a href="https://github.com/vmg/redcarpet">Redcarpet</a>, and <a href="https://github.com/tmm1/pygments.rb">Pygments</a>. This is an experimental demo inspired by <a href="http://ethanschoonover.com/solarized">Solarized</a>, and may change until the project stabilizes.</p>
@@ -50,11 +50,13 @@
     </p>
   </p>
 
-  <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <figure class="highlight">
+    <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
     <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
   <span class="k">end</span>
   <span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-  <span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+  <span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre>
+  </figure>
 
   <h2 class="sub-heading" id="predefined-colors">Predefined colors</h2>
   <p class="btn-present">
@@ -83,20 +85,24 @@
   </p>
 
   <h2 class="sub-heading" id="more-examples">More Examples</h1>
-  <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">show</span>
+    <div class="highlighter-rouge">
+      <pre class="highlight"><code><span class="k">def</span> <span class="nf">show</span>
   <span class="vi">@widget</span> <span class="o">=</span> <span class="no">Widget</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="ss">:id</span><span class="p">])</span>
   <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
     <span class="nb">format</span><span class="p">.</span><span class="nf">html</span> <span class="c1"># show.html.erb</span>
     <span class="nb">format</span><span class="p">.</span><span class="nf">json</span> <span class="p">{</span> <span class="n">render</span> <span class="ss">json: </span><span class="vi">@widget</span> <span class="p">}</span>
   <span class="k">end</span></code></pre> </div>
 
-  <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+    <figure class="highlight">
+      <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
     <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
   <span class="k">end</span>
   <span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-  <span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+  <span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre>
+    </figure>
 
-  <div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!doctype html&gt;</span>
+    <div class="language-html highlighter-rouge">
+      <pre class="highlight"><code><span class="cp">&lt;!doctype html&gt;</span>
   <span class="nt">&lt;html&gt;</span>
     <span class="nt">&lt;head&gt;</span>
       <span class="nt">&lt;title&gt;</span>Title!<span class="nt">&lt;/title&gt;</span>
@@ -109,7 +115,8 @@
     <span class="nt">&lt;/body&gt;</span>
   <span class="nt">&lt;/html&gt;</span></code></pre> </div>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">// Load the http module to create an http server.</span>
+    <div class="highlighter-rouge">
+      <pre class="highlight"><code><span class="c1">// Load the http module to create an http server.</span>
   <span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'http'</span><span class="p">);</span>
 
   <span class="c1">// Configure our HTTP server to respond with Hello World to all requests.</span>
@@ -124,7 +131,8 @@
   <span class="c1">// Put a friendly message on the terminal</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Server running at http://127.0.0.1:8000/"</span><span class="p">);</span></code></pre> </div>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code><span class="ss">diff</span><span class="p">(</span><span class="ss">plus</span><span class="p">(</span><span class="nv">A</span><span class="p">,</span><span class="nv">B</span><span class="p">),</span> <span class="nv">X</span><span class="p">,</span> <span class="ss">plus</span><span class="p">(</span><span class="nv">DA</span><span class="p">,</span> <span class="nv">DB</span><span class="p">))</span>
+    <div class="highlighter-rouge">
+      <pre class="highlight"><code><span class="ss">diff</span><span class="p">(</span><span class="ss">plus</span><span class="p">(</span><span class="nv">A</span><span class="p">,</span><span class="nv">B</span><span class="p">),</span> <span class="nv">X</span><span class="p">,</span> <span class="ss">plus</span><span class="p">(</span><span class="nv">DA</span><span class="p">,</span> <span class="nv">DB</span><span class="p">))</span>
      <span class="o">&lt;=</span> <span class="ss">diff</span><span class="p">(</span><span class="nv">A</span><span class="p">,</span> <span class="nv">X</span><span class="p">,</span> <span class="nv">DA</span><span class="p">)</span> <span class="ss">and</span> <span class="ss">diff</span><span class="p">(</span><span class="nv">B</span><span class="p">,</span> <span class="nv">X</span><span class="p">,</span> <span class="nv">DB</span><span class="p">).</span>
 
   <span class="ss">diff</span><span class="p">(</span><span class="ss">times</span><span class="p">(</span><span class="nv">A</span><span class="p">,</span><span class="nv">B</span><span class="p">),</span> <span class="nv">X</span><span class="p">,</span> <span class="ss">plus</span><span class="p">(</span><span class="ss">times</span><span class="p">(</span><span class="nv">A</span><span class="p">,</span> <span class="nv">DB</span><span class="p">),</span> <span class="ss">times</span><span class="p">(</span><span class="nv">DA</span><span class="p">,</span> <span class="nv">B</span><span class="p">)))</span>
@@ -134,38 +142,41 @@
   <span class="ss">diff</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">X</span><span class="p">,</span> <span class="m">1</span><span class="p">).</span>
   <span class="ss">diff</span><span class="p">(</span><span class="nv">Y</span><span class="p">,</span> <span class="nv">X</span><span class="p">,</span> <span class="m">0</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="ss">not</span> <span class="ss">equal</span><span class="p">(</span><span class="nv">Y</span><span class="p">,</span> <span class="nv">X</span><span class="p">).</span></code></pre> </div>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code><span class="n">service</span> <span class="p">{</span> <span class="s1">'ntp'</span><span class="p">:</span>
+    <div class="highlighter-rouge">
+      <pre class="highlight"><code><span class="n">service</span> <span class="p">{</span> <span class="s1">'ntp'</span><span class="p">:</span>
     <span class="py">name</span>      <span class="p">=&gt;</span> <span class="nv">$service_name</span><span class="p">,</span>
     <span class="py">ensure</span>    <span class="p">=&gt;</span> <span class="n">running</span><span class="p">,</span>
     <span class="py">enable</span>    <span class="p">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
     <span class="kp">subscribe</span> <span class="p">=&gt;</span> <span class="nc">File</span><span class="p">[</span><span class="s1">'ntp.conf'</span><span class="p">],</span>
   <span class="p">}</span></code></pre> </div>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="o">)</span> <span class="o">{</span>
+    <div class="highlighter-rouge">
+      <pre class="highlight"><code><span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="o">)</span> <span class="o">{</span>
     <span class="kd">var</span> <span class="n">collection</span><span class="o">=[</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">,</span><span class="mi">5</span><span class="o">];</span>
     <span class="k">for</span><span class="o">(</span><span class="kd">var</span> <span class="n">a</span> <span class="k">in</span> <span class="n">collection</span><span class="o">){</span>
       <span class="n">print</span><span class="o">(</span><span class="n">a</span><span class="o">);</span>
     <span class="o">}</span>
   <span class="o">}</span></code></pre> </div>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>Markdown has cool <span class="p">[</span><span class="nv">reference links</span><span class="p">][</span><span class="ss">ref 1</span><span class="p">]</span>
+    <div class="highlighter-rouge">
+      <pre class="highlight"><code>Markdown has cool <span class="p">[</span><span class="nv">reference links</span><span class="p">][</span><span class="ss">ref 1</span><span class="p">]</span>
   and <span class="p">[</span><span class="nv">regular links too</span><span class="p">](</span><span class="sx">http://example.com</span><span class="p">)</span>
 
   <span class="p">[</span><span class="ss">ref 1</span><span class="p">]:</span> <span class="sx">http://example.com</span></code></pre> </div>
 
-  <h2 class="sub-heading" id="usage">Usage</h2>
-  <p>Copy the following code and paste it into your <a href="https://github.com/jekyll/jekyll">Jekyll</a> styles, it also works with any <a href="https://github.com/jneen/rouge">Rouge</a> or <a href="https://github.com/vmg/redcarpet">Redcarpet</a> compatible highlighters:</p>
-  <div class="highlight">
-    <pre class="generated-styles" id="generated-styles" contenteditable autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">Source not generated</pre>
-  </div>
+    <h2 class="sub-heading" id="usage">Usage</h2>
+    <p>Copy the following code and paste it into your <a href="https://github.com/jekyll/jekyll">Jekyll</a> styles, it also works with any <a href="https://github.com/jneen/rouge">Rouge</a> or <a href="https://github.com/vmg/redcarpet">Redcarpet</a> compatible highlighters:</p>
+    <div class="highlight">
+      <pre class="generated-styles" id="generated-styles" contenteditable autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">Source not generated</pre>
+    </div>
 
-  <h2 class="sub-heading" id="source-code">Source Code</h2>
-  <p><a href="https://github.com/sparanoid/randomized">GitHub</a></p>
+    <h2 class="sub-heading" id="source-code">Source Code</h2>
+    <p><a href="https://github.com/sparanoid/randomized">GitHub</a></p>
 
-  <h2 class="sub-heading" id="donate">Donate</h2>
-  <p>This is a side project by <a href="https://sparanoid.com/">Tunghsiao Liu</a>, if you like this service, please consider <a href="https://sparanoid.com/donate/">buying me a cup of coffee</a>. Thanks.</p>
+    <h2 class="sub-heading" id="donate">Donate</h2>
+    <p>This is a side project by <a href="https://sparanoid.com/">Tunghsiao Liu</a>, if you like this service, please consider <a href="https://sparanoid.com/donate/">buying me a cup of coffee</a>. Thanks.</p>
 
-  <p><small>&copy; Sparanoid, Inc.</small></p>
+    <p><small>&copy; Sparanoid, Inc.</small></p>
 </div>
 
 <script src="vendor/less.min.js" data-env="production"></script>
