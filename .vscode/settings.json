@@ -1,0 +1,5 @@
+{
+  "beautify.ignore": [
+    "**/*.html",
+  ]
+}
